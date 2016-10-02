@@ -14,7 +14,7 @@ app.set( 'port', ( process.env.PORT || 8080 ) );
 mongoose.connect(configDB.url);
 
 // configure to parse both json and url-encoded requests
-app.use( bodyparser.urlencoded( {extended: false} ) );
+app.use( bodyparser.urlencoded( {extended: true} ) );
 app.use( bodyparser.json() );
 app.use(cookieParser());
 app.use(session({secret: 'booksyncsecret'}));
