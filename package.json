@@ -4,16 +4,23 @@
   "description": "An application that allows users to sync bookmarks",
   "main": "server.js",
   "scripts": {
-    "server": "node server.js"
+    "server": "nodemon server.js"
   },
   "author": "Akash Sant",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.2"
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "mongoose": "^4.6.2",
+    "passport": "^0.3.2",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
-    "babel-preset-es2015": "^6.16.0"
+    "babel-preset-es2015": "^6.16.0",
+    "express-session": "^1.14.1",
+    "nodemon": "^1.10.2"
   }
 }
