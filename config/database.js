@@ -1,3 +1,3 @@
 module.exports = {
-  'url': 'mongodb://localhost/BookSync_DB'
+  'url': 'mongodb://<booksyncadmin>:<q7834kjwhekridjfo>@ds041939.mlab.com:41939/booksyncd'
 };
