@@ -1,10 +1,9 @@
 module.exports = function (app, passport) {
   app.get('/', function (req, res) {
-    console.info("entry point");
     res.send("Welcome to BookSync!");
   });
 
-  app.get('/home', function (req, res) {
+  app.get('/home', loggedIn, function (req, res) {
     res.send(req.user);
   });
   
@@ -19,4 +18,9 @@ module.exports = function (app, passport) {
         }));
 };
 
-
+function loggedIn(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/');
+}
