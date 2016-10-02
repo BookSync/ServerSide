@@ -6,7 +6,13 @@ var userSchema = mongoose.Schema({
             access_token: String,
             name: String,
             email: String
-          }
+          },
+  bookmarks: [
+    {
+      title : String,
+      url : String
+    }
+  ]
 });
 
 module.exports = mongoose.model('User', userSchema);
